@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;1,200;1,300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: poppins , sans-serif;
+}
+
+body {
+    background-image: linear-gradient(45deg, #8e2de2, #4a00e0);
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    background-color: white;
+    padding: 20px;
+    height: 350px;
+    width: 300px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    border: 3px solid #4a00e0;
+}
+
+main h2 {
+    margin-bottom: 2rem;
+    font-weight: 600;
+    position: relative;
+}
+
+main h2::after {
+    content: '';
+    position: absolute;
+    height: 1.5px;
+    width: 15px;
+    bottom: 3px;
+    left: 0;
+    border-radius: 8px;
+    background: #4a00e0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-field {
+    position: relative;
+}
+
+.input-field:first-child {
+    margin-bottom: 1.5rem;
+}
+
+.input-field .underline::before {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.input-field .underline::after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background-image: linear-gradient(45deg, #8e2de2, #4a00e0);
+    transform: scaleX(0);
+    transition: all .3s ease-in-out;
+    transform-origin: left;
+}
+
+input:focus ~ .underline::after {
+    transform: scaleX(1);
+}
+
+.input-field input {
+    border: white;
+    outline: none;
+    font-size: 1.3rem;
+    color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+}
+
+.input-field input::placeholder {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.btn {
+    margin-top: 2rem;
+    padding: 0.4rem;
+    background-image: linear-gradient(to right, #8e2de2, #4a00e0);
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+    font-size: 12px;
+    font-weight: 300;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    letter-spacing: 0.5px;
+    background-image: linear-gradient(to left, #8e2de2, #4a00e0);
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+.footer span {
+    color: black;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.social-field {
+    padding: 00.4rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    width: 100%;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.social-field a i {
+    margin: 5px
+}
+
+.social-field a {
+    text-decoration: none;
+    color: white;
+}
+
+.social-field.twitter {
+    background-image: linear-gradient(to right, #56a7f2, #468aca);
+}
+
+.social-field.facebook {
+    background-image: linear-gradient(to right, #1e3c72, #2a5298);
+}
