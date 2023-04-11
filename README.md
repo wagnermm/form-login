@@ -3,4 +3,4 @@
 
 ## Exemplo ☟
 
-<div style="width:50%"><img src="./vendor/exemple-form.png" alt="form-example"></div>
+<div><img src="./vendor/exemple-form.png" alt="form-example"></div>
