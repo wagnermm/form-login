@@ -11,10 +11,13 @@
 <body>
     <main class="container">
         <h2>Login</h2>
-        <form action="">
+        <form action="" class="form">
             <div class="input-field">
-                <input type="text" name="username" id="username" placeholder="Enter your username">
+                <input type="text" name="name" id="name" placeholder="Enter your username">
                 <div class="underline"></div>
+                <small class="text-muted">
+                    Digite um nome válido
+                </small>   
             </div>
             <div class="input-field">
                 <input type="password" name="password" id="password" placeholder="Enter your password">
@@ -40,5 +43,8 @@
             </div>
         </form>
     </main>
+    <script src="./vendor/jquery/jquery-3.6.1.min.js"></script>
+    <script src="./vendor/jquery-mask/"></script>
+    <script src="./js/script.js"></script>
 </body>
 </html>

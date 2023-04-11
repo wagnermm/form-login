@@ -24,8 +24,9 @@ body {
 .container {
     background-color: white;
     padding: 20px;
-    height: 350px;
-    width: 300px;
+    height: 450px;
+    width: 400px;
+    line-height: 30px;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
     border: 3px solid #4a00e0;
@@ -153,4 +154,9 @@ input:focus ~ .underline::after {
 
 .social-field.facebook {
     background-image: linear-gradient(to right, #1e3c72, #2a5298);
+}
+
+.text-muted {
+    color: #f00;
+	display: none;
 }
