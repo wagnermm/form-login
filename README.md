@@ -1,2 +1,2 @@
 ## Project description:
-- A form of login with css and html.
+- A form of login with HTML, CSS and JavaScript.
