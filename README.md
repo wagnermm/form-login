@@ -1,2 +1,2 @@
-# Project description:
-- A form with only pure html, css and jQuery validate.
+## Project description:
+- A form of login with css and html.
