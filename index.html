@@ -15,15 +15,14 @@
             <div class="input-field">
                 <input type="text" name="name" id="name" placeholder="Enter your username">
                 <div class="underline"></div>
-                <small class="text-muted">
-                    Digite um nome válido
-                </small>   
+                <div id="messageName"></div>
             </div>
             <div class="input-field">
                 <input type="password" name="password" id="password" placeholder="Enter your password">
                 <div class="underline"></div>
+                <div id="messagePass"></div>
             </div>
-            <input type="submit" value="continue" class="btn">
+            <input type="submit" value="continue" class="btn" disabled>
             <div class="footer">
                 <span>Or conect with social media</span>
             </div>
@@ -40,11 +39,15 @@
                         Sign in with facebook
                     </a>
                 </div>
+                <div class="social-field google">
+                    <a href="#">
+                        <i class="fa-brands fa-google"></i>
+                        Sign in with google
+                    </a>
+                </div>
             </div>
         </form>
     </main>
-    <script src="./vendor/jquery/jquery-3.6.1.min.js"></script>
-    <script src="./vendor/jquery-mask/"></script>
     <script src="./js/script.js"></script>
 </body>
 </html>

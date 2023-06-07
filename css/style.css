@@ -12,24 +12,24 @@ html {
 }
 
 body {
-    background-image: linear-gradient(45deg, #8e2de2, #4a00e0);
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgb(3, 0, 27) 100%);
     background-repeat: no-repeat;
     min-height: 100vh;
     min-width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 40px;
 }
 
 .container {
     background-color: white;
     padding: 20px;
-    height: 450px;
+    height: auto;
     width: 400px;
     line-height: 30px;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
-    border: 3px solid #4a00e0;
+    border: 3px solid rgb(3, 0, 27);
 }
 
 main h2 {
@@ -46,7 +46,7 @@ main h2::after {
     bottom: 3px;
     left: 0;
     border-radius: 8px;
-    background: #4a00e0;
+    background: #e70707;
 }
 
 form {
@@ -79,7 +79,7 @@ form {
     width: 100%;
     bottom: -5px;
     left: 0;
-    background-image: linear-gradient(45deg, #8e2de2, #4a00e0);
+    background: rgba(34,193,195,1);
     transform: scaleX(0);
     transition: all .3s ease-in-out;
     transform-origin: left;
@@ -104,7 +104,7 @@ input:focus ~ .underline::after {
 .btn {
     margin-top: 2rem;
     padding: 0.4rem;
-    background-image: linear-gradient(to right, #8e2de2, #4a00e0);
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgb(3, 0, 27) 100%);
     border-radius: 4px;
     cursor: pointer;
     color: white;
@@ -115,7 +115,13 @@ input:focus ~ .underline::after {
 
 .btn:hover {
     letter-spacing: 0.5px;
-    background-image: linear-gradient(to left, #8e2de2, #4a00e0);
+    background: linear-gradient(0deg, rgb(3, 0, 27)0%, rgba(34,193,195,1)100%);
+}
+
+.btn:disabled {
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(3, 0, 27, 0.6) 100%);
+    cursor: auto;
+    letter-spacing: normal;
 }
 
 .footer {
@@ -149,14 +155,19 @@ input:focus ~ .underline::after {
 }
 
 .social-field.twitter {
-    background-image: linear-gradient(to right, #56a7f2, #468aca);
+    background: rgba(34,193,195,1);
 }
 
 .social-field.facebook {
-    background-image: linear-gradient(to right, #1e3c72, #2a5298);
+    background: rgb(3, 0, 27);
 }
 
-.text-muted {
+.social-field.google {
+    background: #e70707;
+}
+
+#messageName, #messagePass {
     color: #f00;
-	display: none;
+    font-size: 12px;
+    font-weight: bold;
 }
