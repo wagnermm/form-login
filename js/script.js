@@ -40,10 +40,15 @@ function validaName(elemento){
     let nome = document.querySelector('#name').value;
     let password = document.querySelector('#password').value;
     if(nome && password) {
-        document.querySelector('.btn').disabled = false;
-        document.querySelector('.container').style.display="none"
-    } else {
         document.querySelector('.btn').disabled = true;
-        document.querySelector('.container').style.display="block"
-    }
-  }
+        document.querySelector('.container').style.display="none";
+        document.querySelector('.logOut').style.display="flex";
+    } else {
+        document.querySelector('.btn').disabled = false;
+        document.querySelector('.container').style.display="block";
+        document.querySelector('.logOut').style.display="none";
+    };
+  };
+
+  const logOut = document.querySelector('.btn-logOut');
+  logOut.addEventListener('click', function(){location.reload()});

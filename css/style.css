@@ -173,3 +173,29 @@ input:focus ~ .underline::after {
     font-size: 12px;
     font-weight: bold;
 }
+
+.logOut {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 200px;
+    height: 100px;
+    background: rgba(248, 228, 228, 0.6);
+    border-radius: 5px;
+}
+
+.logOut > button {
+    position: relative;
+    margin-top: 3rem;
+    width: 80px;
+    height: 25px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1.4rem;
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(3, 0, 27, 0.6) 100%);
+    cursor: pointer;
+}
