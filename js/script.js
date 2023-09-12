@@ -1,54 +1,53 @@
+let nomeValido = /^[a-z]{2}/i;
+let passValido = /^[0-9]{6}$/;
+let button = document.querySelector('.btn');
+let messageName = document.querySelector('#messageName');
+let messagePassword = document.querySelector('#messagePass');
+let container = document.querySelector('.container');
+let logOutContainer = document.querySelector('.logOut');
 
-function validaName(elemento){
+/* Valida nome */
+const validaName =(elemento)=> {
     elemento.addEventListener('focusout', function() {
-        const nameValido = /^[a-z]{2}/i
-        if(this.value.match(nameValido)){
-            document.querySelector('#messageName').innerHTML = "";
-            document.querySelector('.btn').disabled = true;
+        if(this.value.match(nomeValido)){
+            messageName.innerHTML = "";
             return false;
         } else {
-            document.querySelector('#messageName').innerHTML = "Invalid Name";
-            document.querySelector('.btn').disabled = true;
+            messageName.innerHTML = "Invalid Name";
         };
     });
-  };
-  let campoName = document.querySelectorAll('input#name');
-  for( let emFoco of campoName) {
-      validaName(emFoco);
-  };
+};
+let campoName = document.querySelectorAll('input#name');
+for( let emFoco of campoName) {
+    validaName(emFoco);
+};
 
 
-  function validaPass(elemento){
+/* Valida password */
+const validaPass =(elemento)=> {
     elemento.addEventListener('focusout', function() {
-        const passValido = /^[0-9]{4}$/
         if(this.value.match(passValido)){
-            document.querySelector('#messagePass').innerHTML = "";
-            document.querySelector('.btn').disabled = false;
+            messagePassword.innerHTML = "";
             return false;
         } else {
-            document.querySelector('#messagePass').innerHTML = "Your password must have 4 numbers";
-            document.querySelector('.btn').disabled = true;
+            messagePassword.innerHTML = "Your password must have 6 numbers";
         };
     });
-  };
-  let campoPass = document.querySelectorAll('input#password');
-  for( let emFoco of campoPass) {
-      validaPass(emFoco);
-  };
+};
+let campoPass = document.querySelectorAll('input#password');
+for( let emFoco of campoPass) {
+    validaPass(emFoco);
+};
 
-  function btnEnter() {
-    let nome = document.querySelector('#name').value;
-    let password = document.querySelector('#password').value;
-    if(nome && password) {
-        document.querySelector('.btn').disabled = true;
-        document.querySelector('.container').style.display="none";
-        document.querySelector('.logOut').style.display="flex";
+
+/* Habilita botao */
+const buttonAbled = ()=> {
+    const nome = document.getElementById('name').value;
+    const password = document.getElementById('password').value;
+    if(nome.match(nomeValido) && password.match(passValido)) {
+        button.disabled = false;
+        return
     } else {
-        document.querySelector('.btn').disabled = false;
-        document.querySelector('.container').style.display="block";
-        document.querySelector('.logOut').style.display="none";
+        button.disabled = true;
     };
-  };
-
-  const logOut = document.querySelector('.btn-logOut');
-  logOut.addEventListener('click', function(){location.reload()});
+};

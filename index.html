@@ -9,23 +9,20 @@
     <title>Formulário</title>
 </head>
 <body>
-    <div class="logOut">
-        <button type="button" class="btn-logOut">Log out</button>
-    </div>
     <main class="container">
         <h2>Login</h2>
         <form action="" class="form">
             <div class="input-field">
-                <input type="text" name="name" id="name" placeholder="Enter your username or e-mail">
+                <input type="text" name="name" id="name" placeholder="Enter your username" onchange="buttonAbled()" maxlength="15">
                 <div class="underline"></div>
                 <div id="messageName"></div>
             </div>
             <div class="input-field">
-                <input type="password" name="password" id="password" placeholder="Enter your password">
+                <input type="password" name="password" id="password" onkeypress="return event.charCode >= 48 && event.charCode <= 57" placeholder="Enter your password" onchange="buttonAbled()" maxlength="6">
                 <div class="underline"></div>
                 <div id="messagePass"></div>
             </div>
-            <input type="submit" value="continue" class="btn" onclick="btnEnter()" disabled>
+            <input type="submit" value="continue" class="btn" disabled>
             <div class="footer">
                 <span>Or conect with social media</span>
             </div>
