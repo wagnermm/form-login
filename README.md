@@ -4,4 +4,5 @@
 <div>
     <img src="./img/telalogin.png" alt="tela login">
     <img src="img/./telalogin-erro.png" alt="tela login erro">
+    <img src="./img/telalogin-correct.png" alt="tela login correct">
 </div>
